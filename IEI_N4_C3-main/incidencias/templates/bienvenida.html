@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Incidencias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f9;
+            color: #222;
+        }
+        main {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,.08);
+        }
+        h1 { color: #092e20; }
+        .estado { padding: 12px; border-radius: 8px; background: #eef7f1; }
+        .datos { line-height: 1.8; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>¡Bienvenido, {{ nombre }}!</h1>
+        <p>Aplicación web de gestión de incidencias desarrollada con Django.</p>
+
+        <section class="datos">
+            <h2>Resumen</h2>
+            <p>Total de incidencias: <strong>{{ cantidad_incidencias }}</strong></p>
+            <p>Incidencias resueltas: <strong>{{ incidencias_resueltas }}</strong></p>
+            <p>Incidencias pendientes: <strong>{{ incidencias_pendientes }}</strong></p>
+        </section>
+
+        <p class="estado"><strong>Estado:</strong> {{ estado }}</p>
+        <p><small>Consulta realizada: {{ fecha_consulta }}</small></p>
+    </main>
+</body>
+</html>
